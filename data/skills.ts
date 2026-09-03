@@ -15,6 +15,7 @@ export const SKILLS = [
       { name: "Node.js", icon: "/icons/skills/nodejs.png" },
       { name: "Express.js", icon: "/icons/skills/express.png" },
       { name: "REST APIs", icon: "/icons/skills/api.png" },
+      { name: "AI Integration", icon: "/icons/skills/llm.png" },
     ],
   },
   {
