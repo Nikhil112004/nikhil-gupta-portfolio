@@ -27,7 +27,7 @@ export const PROJECTS = [
     ],
     technologies: ["React", "TypeScript", "Node.js", "Claude API", "Gemini API", "Redis", "BullMQ"],
     github: "https://github.com/Nikhil112004/veda-ai-assignment",
-    live: "https://vedaai-assessment-monorepo-web.vercel.app/",
+    live: "https://web-btwn.vercel.app/",
     image: "/images/projects/veda-ai.png",
   },
   {
