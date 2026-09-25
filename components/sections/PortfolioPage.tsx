@@ -184,7 +184,7 @@ export default function PortfolioPage() {
             </li>
             <li>
               <strong>Current interests</strong>
-              <span>React, Next.js, Node.js, and open-source projects.</span>
+              <span>Frontend, Backend, Full-Stack, and open-source projects.</span>
             </li>
           </ul>
         </div>
