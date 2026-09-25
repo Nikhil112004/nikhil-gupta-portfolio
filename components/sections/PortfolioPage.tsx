@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import {
   ArrowUpRight,
-  BriefcaseBusiness,
+  ChevronsUpDown,
   Code2,
   ExternalLink,
   Mail,
   MapPin,
+  X,
 } from "lucide-react";
 import { CODING_PROFILES } from "@/data/codingProfiles";
 import { EXPERIENCE } from "@/data/experience";
@@ -117,7 +118,7 @@ function ContactLinks() {
 function ExperienceList() {
   return EXPERIENCE.map((item) => (
     <article className="list-row experience-row" key={`${item.company}-${item.role}`}>
-      <span className="row-icon"><BriefcaseBusiness size={15} /></span>
+      <span className="row-icon experience-logo"><img src={item.logo} alt={`${item.company} logo`} /></span>
       <div>
         <h3>{item.company}</h3>
         <p>{item.role}</p>
@@ -130,29 +131,39 @@ function ExperienceList() {
 }
 
 function ProjectList() {
-  return PROJECTS.map((project) => (
-    <article className="list-row project-row" key={project.title}>
-      <span className="row-icon"><Code2 size={15} /></span>
-      <div className="project-copy">
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+  return PROJECTS.map((project, index) => (
+    <details className="project-disclosure" key={project.title} open={index === 0}>
+      <summary className="project-summary">
+        <span className="row-icon"><Code2 size={15} /></span>
+        <span className="project-summary-copy">
+          <strong>{project.title}</strong>
+          <small>{project.subtitle}</small>
+        </span>
+        <ChevronsUpDown className="project-chevron" size={16} aria-hidden="true" />
+        <X className="project-close" size={16} aria-hidden="true" />
+      </summary>
+      <div className="project-details">
+        <p className="project-description">{project.description}</p>
+        <ul className="project-highlights">
+          {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+        </ul>
         <div className="tag-list">
           {project.technologies.map((item) => <span key={item}>{item}</span>)}
         </div>
+        <div className="project-links">
+          {project.live && (
+            <a href={project.live} target="_blank" rel="noreferrer">
+              Live demo <ExternalLink size={13} />
+            </a>
+          )}
+          <a href={project.github} target="_blank" rel="noreferrer">
+            Source code <ExternalLink size={13} />
+          </a>
+        </div>
       </div>
-      <a
-        className="row-action"
-        href={project.live || project.github}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`Open ${project.title}`}
-      >
-        <ExternalLink size={15} />
-      </a>
-    </article>
+    </details>
   ));
 }
-
 function StackIcons() {
   const skills = SKILLS.flatMap((group) => group.skills);
 
