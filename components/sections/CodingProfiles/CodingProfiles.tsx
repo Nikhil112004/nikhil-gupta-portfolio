@@ -1,38 +1,66 @@
 "use client";
 
-import { motion } from "framer-motion";
-import ProfileCard from "./ProfileCard";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, ArrowRight, Code2 } from "lucide-react";
 import { CODING_PROFILES } from "@/data/codingProfiles";
+import ProfileCard from "./ProfileCard";
+
+type Activity = Record<string, number>;
 
 export default function CodingProfiles() {
+  const railRef = useRef<HTMLDivElement>(null);
+  const [activity, setActivity] = useState<Activity>({});
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetch("/api/leetcode", { signal: controller.signal })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { activity?: Activity } | null) => {
+        if (data?.activity) setActivity(data.activity);
+      })
+      .catch(() => {
+        // Keep the cards usable when the activity endpoint is unavailable.
+      });
+
+    return () => controller.abort();
+  }, []);
+
+  function moveRail(direction: -1 | 1) {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const card = rail.querySelector<HTMLElement>(".profile-card");
+    rail.scrollBy({
+      left: direction * ((card?.offsetWidth ?? 260) + 12),
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <section id="coding-profiles" className="px-5 py-12 sm:px-6 sm:py-14 lg:py-16">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-8 sm:mb-10 lg:mb-12">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
-            Coding Profiles
-          </p>
-
-          <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            My coding journey &amp; activity
-          </h2>
+    <section id="coding-profiles" className="portfolio-section">
+      <div className="section-heading profile-heading">
+        <div>
+          <h2>Contribution Activity</h2>
+          <p>GitHub | LeetCode | Namaste JS</p>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {CODING_PROFILES.map((profile) => (
-            <ProfileCard
-              key={profile.name}
-              {...profile}
-            />
-          ))}
-        </motion.div>
+        <div className="carousel-controls">
+          <button type="button" onClick={() => moveRail(-1)} aria-label="Previous profile">
+            <ArrowLeft size={15} />
+          </button>
+          <button type="button" onClick={() => moveRail(1)} aria-label="Next profile">
+            <ArrowRight size={15} />
+          </button>
+        </div>
       </div>
+      <div className="profile-viewport">
+        <div className="profile-rail" ref={railRef}>
+          {CODING_PROFILES.map((profile) => (
+            <ProfileCard key={profile.name} {...profile} activity={activity} />
+          ))}
+        </div>
+      </div>
+      <p className="swipe-hint"><Code2 size={13} /> Swipe to explore all three profiles</p>
     </section>
   );
 }

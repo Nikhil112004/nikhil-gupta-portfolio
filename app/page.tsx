@@ -1,26 +1,2 @@
-import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Experience from "@/components/sections/Experience";
-import Projects from "@/components/sections/Projects";
-import Skills from "@/components/sections/Skills";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/layout/Footer";
-import CodingProfiles from "@/components/sections/CodingProfiles";
-
-
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-background text-foreground"> 
-    <Navbar />
-    <Hero />
-    <About /> 
-    <CodingProfiles />
-    <Experience />
-    <Projects />
-    <Skills />
-    <Contact />
-    <Footer />
-    </main>
-  )
-}
+﻿import PortfolioPage from "@/components/sections/PortfolioPage";
+export default function Home() { return <PortfolioPage />; }
