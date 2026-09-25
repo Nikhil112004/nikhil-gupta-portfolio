@@ -1222,3 +1222,28 @@ html[data-theme="dark"] .topbar {
     font-size: 12px;
   }
 }
+
+.hero-banner .signature {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(36px, 7vw, 54px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  text-shadow: none;
+}
+
+.hero-banner .hero-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+}
+
+.brand-preview .signature {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  text-shadow: none;
+}

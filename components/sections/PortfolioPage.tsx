@@ -83,7 +83,7 @@ function ProfileHeader() {
       </header>
       <div id="home" className="hero-banner">
         <span className="signature">Nikhil Gupta</span>
-        <span className="hero-caption">FULL STACK ENGINEER · INDIA</span>
+        <span className="hero-caption">FULL STACK DEVELOPER / INDIA</span>
       </div>
       <FullWidthDivider />
       <div className="identity">
@@ -91,7 +91,7 @@ function ProfileHeader() {
         <div className="identity-copy">
           <p className="eyebrow">FULL STACK ENGINEER · OPEN TO OPPORTUNITIES</p>
           <h1>Nikhil Gupta <span className="verified" aria-label="Verified profile">✓</span></h1>
-          <p>Building thoughtful products for the web.</p>
+          <p>I build web apps, from interface to API.</p>
         </div>
       </div>
     <FullWidthDivider />
@@ -175,16 +175,16 @@ export default function PortfolioPage() {
       <Section id="about" title="About">
         <div className="prose">
           <p className="about-lede">
-            Full stack developer who builds practical, user-focused web products across frontend and backend.
+            I work across frontend and backend, building features and connecting the pieces behind them.
           </p>
           <ul className="about-highlights">
             <li>
-              <strong>Product experience</strong>
-              <span>Contributed to frontend and backend features during internships, including API integrations and responsive UI improvements.</span>
+              <strong>Internships</strong>
+              <span>Built frontend and backend features, integrated APIs, fixed responsive UI issues, and worked with databases.</span>
             </li>
             <li>
-              <strong>Areas of interest</strong>
-              <span>Frontend, Backend, Full-Stack, open source, and thoughtful user experiences.</span>
+              <strong>Current interests</strong>
+              <span>React, Next.js, Node.js, and open-source projects.</span>
             </li>
           </ul>
         </div>
@@ -197,7 +197,7 @@ export default function PortfolioPage() {
         <div className="brand-preview"><span className="signature">Nikhil Gupta</span></div>
       </Section>
       <footer className="portfolio-footer">
-        <span>Designed &amp; built by Nikhil Gupta</span>
+        <span>Made by Nikhil Gupta</span>
         <span>
           <a href="https://github.com/Nikhil112004" aria-label="GitHub"><img className="brand-icon" src="/icons/github.png" alt="" /></a>
           <a href="https://linkedin.com/in/nikhil-gupta-28091a262" aria-label="LinkedIn"><img className="brand-icon" src="/icons/linkedin.png" alt="" /></a>
