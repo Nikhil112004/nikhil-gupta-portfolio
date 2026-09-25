@@ -174,14 +174,18 @@ export default function PortfolioPage() {
       <ContactLinks />
       <Section id="about" title="About">
         <div className="prose">
-          <p>
-            Full Stack Developer who enjoys building real-world products. I have worked on
-            frontend and backend features during internships, integrating APIs, fixing
-            responsive UI issues, and contributing to production applications.
+          <p className="about-lede">
+            Full stack developer who builds practical, user-focused web products across frontend and backend.
           </p>
-          <ul>
-            <li>Comfortable working across React, Next.js, Node.js, and databases.</li>
-            <li>Interested in product engineering, open source, and thoughtful user experiences.</li>
+          <ul className="about-highlights">
+            <li>
+              <strong>Product experience</strong>
+              <span>Contributed to frontend and backend features during internships, including API integrations and responsive UI improvements.</span>
+            </li>
+            <li>
+              <strong>Areas of interest</strong>
+              <span>Frontend, Backend, Full-Stack, open source, and thoughtful user experiences.</span>
+            </li>
           </ul>
         </div>
       </Section>
