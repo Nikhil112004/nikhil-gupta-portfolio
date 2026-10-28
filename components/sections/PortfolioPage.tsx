@@ -88,7 +88,7 @@ function ProfileHeader() {
       </div>
       <FullWidthDivider />
       <div className="identity">
-        <div className="avatar"><img src="/profile.png" alt="" /></div>
+        <div className="avatar"><img src="/nikhil-profile.jpeg" alt="" /></div>
         <div className="identity-copy">
           <p className="eyebrow">FULL STACK ENGINEER · OPEN TO OPPORTUNITIES</p>
           <h1>Nikhil Gupta <span className="verified" aria-label="Verified profile">✓</span></h1>
