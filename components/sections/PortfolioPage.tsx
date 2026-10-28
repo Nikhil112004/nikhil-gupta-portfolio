@@ -88,7 +88,21 @@ function ProfileHeader() {
       </div>
       <FullWidthDivider />
       <div className="identity">
-        <div className="avatar"><img src="/nikhil-profile.jpeg" alt="" /></div>
+        <div className="avatar" style={{
+    width: "220px",
+    height: "220px",
+    borderRadius: "50%",
+    overflow: "hidden",
+    flexShrink: 0,
+  }}><img src="/nikhil-profile.jpeg" alt="" alt="Nikhil Gupta"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center 35%",
+      display: "block",
+      borderRadius: "50%",
+    }} /></div>
         <div className="identity-copy">
           <p className="eyebrow">FULL STACK ENGINEER · OPEN TO OPPORTUNITIES</p>
           <h1>Nikhil Gupta <span className="verified" aria-label="Verified profile">✓</span></h1>
