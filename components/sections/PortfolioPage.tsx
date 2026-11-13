@@ -94,7 +94,7 @@ function ProfileHeader() {
     borderRadius: "50%",
     overflow: "hidden",
     flexShrink: 0,
-  }}><img src="/nikhil-profile.jpeg" alt="" alt="Nikhil Gupta"
+  }}><img src="/nikhil-profile.jpeg" alt="Nikhil Gupta"
     style={{
       width: "100%",
       height: "100%",
