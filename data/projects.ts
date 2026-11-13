@@ -1,36 +1,5 @@
 export const PROJECTS = [
-  {
-    title: "Second Brain",
-    subtitle: "Notes and content platform",
-    description: "A full-stack app for creating and organizing notes and content with secure user access.",
-    highlights: [
-      "Designed responsive interfaces with React and TypeScript, and optimized application performance.",
-      "Added JWT authentication and role-based authorization.",
-      "Developed Node.js and Express REST APIs for CRUD operations on notes, users, and content.",
-      "Added MongoDB schemas, validation, and error handling to improve data consistency.",
-      "Deployed the frontend and backend for end-to-end access.",
-    ],
-    technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/Nikhil112004/Second-Brain",
-    live: "https://second-brain-gm4j.vercel.app/",
-    image: "/images/projects/second-brain.png",
-  },
-  {
-    title: "VedaAI",
-    subtitle: "AI-powered study tool",
-    description: "A study assistant that generates structured responses and keeps longer tasks responsive.",
-    highlights: [
-      "Integrated Claude and Gemini APIs to generate structured study content.",
-      "Added Redis caching and BullMQ queues to handle background jobs.",
-      "Used WebSockets to send real-time task updates.",
-      "Deployed on Vercel for access across devices.",
-    ],
-    technologies: ["React", "TypeScript", "Node.js", "Claude API", "Gemini API", "Redis", "BullMQ"],
-    github: "https://github.com/Nikhil112004/veda-ai-assignment",
-    live: "https://web-btwn.vercel.app/",
-    image: "/images/projects/veda-ai.png",
-  },
- {
+   {
     title: "Excalidraww",
     subtitle: "Real-Time Collaborative Whiteboard",
     description:
@@ -55,4 +24,35 @@ export const PROJECTS = [
     live: "https://excalidraww.vercel.app/",
     image: "/images/projects/excalidraww.png",
   },
+  {
+    title: "VedaAI",
+    subtitle: "AI-powered study tool",
+    description: "A study assistant that generates structured responses and keeps longer tasks responsive.",
+    highlights: [
+      "Integrated Claude and Gemini APIs to generate structured study content.",
+      "Added Redis caching and BullMQ queues to handle background jobs.",
+      "Used WebSockets to send real-time task updates.",
+      "Deployed on Vercel for access across devices.",
+    ],
+    technologies: ["React", "TypeScript", "Node.js", "Claude API", "Gemini API", "Redis", "BullMQ"],
+    github: "https://github.com/Nikhil112004/veda-ai-assignment",
+    live: "https://web-btwn.vercel.app/",
+    image: "/images/projects/veda-ai.png",
+  },
+  {
+    title: "Second Brain",
+    subtitle: "Notes and content platform",
+    description: "A full-stack app for creating and organizing notes and content with secure user access.",
+    highlights: [
+      "Designed responsive interfaces with React and TypeScript, and optimized application performance.",
+      "Added JWT authentication and role-based authorization.",
+      "Developed Node.js and Express REST APIs for CRUD operations on notes, users, and content.",
+      "Added MongoDB schemas, validation, and error handling to improve data consistency.",
+      "Deployed the frontend and backend for end-to-end access.",
+    ],
+    technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Nikhil112004/Second-Brain",
+    live: "https://second-brain-gm4j.vercel.app/",
+    image: "/images/projects/second-brain.png",
+  }
 ];
