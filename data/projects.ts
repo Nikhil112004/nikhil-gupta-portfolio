@@ -30,18 +30,29 @@ export const PROJECTS = [
     live: "https://web-btwn.vercel.app/",
     image: "/images/projects/veda-ai.png",
   },
-  {
-    title: "Logistic Management System",
-    subtitle: "Warehouse inventory management",
-    description: "A logistics system for keeping warehouse inventory and stock records organized.",
-    highlights: [
-      "Manage inventory across warehouse operations.",
-      "Track products by SKU to find and monitor stock items.",
-      "Provide role-based login for users with different responsibilities.",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Nikhil112004/logistic-management-FE",
-    live: "https://logistic-management-fe.vercel.app/",
-    image: "/images/projects/lms.png",
-  },
+ {
+  title: "Excalidraww",
+  subtitle: "Real-Time Collaborative Whiteboard",
+  description:
+    "A collaborative whiteboard application where users can draw, brainstorm, and share ideas together in real time.",
+  highlights: [
+    "Create and join rooms for collaborative drawing sessions.",
+    "Draw shapes and create visual ideas on an interactive canvas.",
+    "Enable real-time collaboration using WebSockets.",
+    "Authenticate users and manage collaborative sessions.",
+  ],
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "WebSockets",
+    "PostgreSQL",
+    "Prisma",
+    "Turborepo",
+  ],
+  github: "https://github.com/Nikhil112004/excalidraww",
+  live: "https://excalidraww.vercel.app/",
+  image: "/images/projects/excalidraww.png",
+},
 ];
